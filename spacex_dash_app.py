@@ -53,7 +53,7 @@ app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
                                           value=[min_payload, max_payload]),
 
                                 # TASK 4: Add a scatter chart to show the correlation between payload and launch success
-                                #html.Div(dcc.Graph(id='success-payload-scatter-chart')),
+                                html.Div(dcc.Graph(id='success-payload-scatter-chart')),
                                 ])
 
 # TASK 2:
@@ -115,4 +115,4 @@ def update_scattergraph(site_dropdown,payload_slider):
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(8090)
